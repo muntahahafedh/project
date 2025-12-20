@@ -63,7 +63,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "postinstall": "chmod +x node_modules/.bin/react-scripts",
+  "postinstall": "chmod +x ./node_modules/.bin/react-scripts || true",
   "browserslist": {
     "production": [
       ">0.2%",
