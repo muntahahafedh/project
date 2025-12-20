@@ -1,0 +1,77 @@
+.event-register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+.event-register-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.event-register-container h1 {
+  text-align: center;
+  color: #212121;
+  margin-bottom: 1rem;
+}
+
+.event-register-container input,
+.event-register-container select {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.event-register-container select {
+  background: white;
+  appearance: none; /* لإخفاء السهم الافتراضي في بعض المتصفحات */
+}
+
+.btn-register {
+  padding: 0.75rem;
+  background-color: #009688;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-register:hover {
+  background-color: #00796b;
+}
+
+.btn-cancel {
+  padding: 0.75rem;
+  background-color: #e0e0e0;
+  color: #212121;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-cancel:hover {
+  background-color: #bdbdbd;
+}
+
+/* تحسين مظهر Dropdowns والـ inputs */
+.event-register-container input:focus,
+.event-register-container select:focus {
+  border-color: #009688;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 150, 136, 0.3);
+}

@@ -1,0 +1,93 @@
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f5f5f5;
+  padding-bottom: 60px;
+}
+
+.home-header {
+  background: #009688;
+  padding: 2rem 1.5rem 2rem 1.5rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  color: white;
+}
+
+.home-header h2 {
+  margin-bottom: 1rem;
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 0.5rem;
+  transform: translateY(-50%);
+  color: #21212180;
+}
+
+.home-cards {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.card {
+  background: white;
+  flex: 1;
+  margin: 0 0.5rem;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.card:hover {
+  background: #00968810;
+}
+
+.card-icon {
+  color: #009688;
+  width: 24px;
+  height: 24px;
+  margin-bottom: 0.5rem;
+}
+
+.recommendations {
+  padding: 0 1.5rem;
+}
+
+.recommendation-card {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  border: 1px solid #00968820;
+}
+
+.rec-icon {
+  color: #009688;
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+}
+
+.chevron {
+  margin-left: auto;
+  color: #21212140;
+}

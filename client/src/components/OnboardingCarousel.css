@@ -1,0 +1,57 @@
+.onboarding-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+}
+
+.slides-wrapper {
+  display: flex;
+  height: 100%;
+  transition: transform 0.8s ease-in-out;
+}
+
+.onboarding-slide {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.onboarding-slide h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.onboarding-slide p {
+  font-size: 1.2rem;
+  max-width: 80%;
+}
+
+.onboarding-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.onboarding-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transition: background 0.3s;
+}
+
+.onboarding-dot.active {
+  background: white;
+}
+
