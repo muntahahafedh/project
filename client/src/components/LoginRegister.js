@@ -3,8 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { useAppContext } from "../Store/store";
 import "./LoginRegister.css";
 
+// ✅ رابط الـ Backend على Render
+const API_URL = "https://postit-app-server-58v6.onrender.com";
+
 export function LoginRegister() {
-  // ✨ استخدمي userDispatch بدل dispatch
   const { userDispatch } = useAppContext();
   const navigate = useNavigate();
 
@@ -18,7 +20,7 @@ export function LoginRegister() {
     if (!email || !password) return alert("Please enter email and password");
 
     try {
-      const res = await fetch("http://localhost:3001/login", {
+      const res = await fetch(`${API_URL}/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -26,10 +28,9 @@ export function LoginRegister() {
       const data = await res.json();
 
       if (res.ok) {
-        // ✅ استخدمي userDispatch
         userDispatch({ type: "LOGIN", payload: data.user });
-        alert(data.msg || "Login successful!");
-        navigate("/home"); // بعد تسجيل الدخول
+        alert("Login successful!");
+        navigate("/home");
       } else {
         alert(data.error || "Login failed");
       }
@@ -42,10 +43,11 @@ export function LoginRegister() {
   const handleRegister = async () => {
     if (!name || !email || !password || !confirmPassword)
       return alert("Fill all fields");
-    if (password !== confirmPassword) return alert("Passwords do not match");
+    if (password !== confirmPassword)
+      return alert("Passwords do not match");
 
     try {
-      const res = await fetch("http://localhost:3001/registerUser", {
+      const res = await fetch(`${API_URL}/registerUser`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, password }),
@@ -53,9 +55,9 @@ export function LoginRegister() {
       const data = await res.json();
 
       if (res.ok) {
-        alert(data.msg || "Account created!");
+        alert("Account created!");
         setIsRegister(false);
-        navigate("/login"); // بعد إنشاء الحساب
+        navigate("/login");
       } else {
         alert(data.error || "Registration failed");
       }
