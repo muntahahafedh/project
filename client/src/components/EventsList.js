@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Accessibility, Calendar, MapPin, Users } from 'lucide-react';
-import { BottomNav } from './BottomNav';
+import { BottomNav } from './BottomNav.jsx';
 import './EventsList.css';
 
 const filters = ['All', 'Online', 'Offline', 'Upcoming', 'Free'];

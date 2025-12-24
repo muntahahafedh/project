@@ -1,6 +1,6 @@
 // JobsRegister.js
 import React, { useState } from "react";
-import { useAppContext } from "../Store/store";
+import { useAppContext } from "../Store/store.jsx";
 import { useNavigate } from "react-router-dom";
 import "./JobsRegister.css";
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAppContext } from "../Store/store";
+import { useAppContext } from "../Store/store.jsx";
 import "./EventRegister.css";
 
 export function EventRegister() {

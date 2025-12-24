@@ -1,12 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
-import { AppProvider } from "./Store/store";
+import { AppProvider } from "./Store/store.jsx";
 
 import { SplashScreen } from "./components/SplashScreen";
 import { OnboardingCarousel } from "./components/OnboardingCarousel";
 import { LoginRegister } from "./components/LoginRegister";
 import { Register } from "./components/Register";
-import { HomePage } from "./components/HomePage";
+import  HomePage from "./components/HomePage.jsx";
 import Profile from "./components/Profile";
 import { MapView } from "./components/MapView";
 import { JobListings } from "./components/JobListings";

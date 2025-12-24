@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useAppContext } from "../Store/store";
+import { useAppContext } from "../Store/store.jsx";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft, Trash2, Edit2 } from "lucide-react";
 import avatarImg from "../Images/avatar.png";
