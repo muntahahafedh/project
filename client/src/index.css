@@ -1,0 +1,126 @@
+/* index.css */
+
+/* Tailwind base */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom colors and overrides */
+:root {
+  --primary-color: #009688;
+  --primary-color-hover: #00796b;
+  --text-color: #212121;
+  --text-color-light: rgba(33, 33, 33, 0.6);
+  --bg-light: #f5f5f5;
+  --border-light: #f5f5f5;
+}
+
+/* Body background */
+body {
+  @apply font-sans;
+  background-color: var(--bg-light);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* Buttons */
+.button {
+  @apply rounded-lg font-medium transition-all;
+}
+.button-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+.button-primary:hover {
+  background-color: rgba(0, 121, 107, 1);
+}
+.button-outline {
+  border: 1px solid rgba(0, 150, 136, 0.1);
+  color: var(--primary-color);
+  background-color: rgba(0, 150, 136, 0.05);
+}
+.button-ghost {
+  background-color: transparent;
+  color: var(--text-color-light);
+}
+.button-ghost:hover {
+  color: var(--text-color);
+}
+
+/* Cards */
+.card {
+  @apply bg-white rounded-lg shadow-sm p-4;
+  border: 1px solid rgba(0, 150, 136, 0.1);
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  @apply fixed bottom-0 left-0 right-0 bg-white flex justify-around p-2 shadow-md;
+  border-top: 1px solid var(--border-light);
+}
+.bottom-nav button {
+  @apply flex flex-col items-center justify-center p-2 transition-colors;
+}
+.bottom-nav button.active {
+  color: var(--primary-color);
+}
+.bottom-nav button.inactive {
+  color: var(--text-color-light);
+}
+
+/* Inputs */
+.input {
+  @apply border border-gray-300 rounded-md px-3 py-2 w-full;
+}
+.input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+/* Switch (Toggle) */
+.switch {
+  @apply relative inline-flex items-center rounded-full;
+  width: 44px;
+  height: 24px;
+}
+.switch input {
+  @apply sr-only;
+}
+.switch-bg {
+  @apply bg-gray-200 rounded-full transition-colors;
+  width: 44px;
+  height: 24px;
+}
+.switch-checked {
+  background-color: var(--primary-color);
+}
+.switch-thumb {
+  @apply inline-block bg-white rounded-full transition-transform;
+  width: 20px;
+  height: 20px;
+  transform: translateX(2px);
+}
+.switch-checked .switch-thumb {
+  transform: translateX(22px);
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+  @apply font-semibold;
+}
+p,
+span {
+  color: var(--text-color-light);
+}
+
+/* Scrollbar (optional) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 999px;
+}

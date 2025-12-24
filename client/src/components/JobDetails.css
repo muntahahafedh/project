@@ -1,0 +1,118 @@
+.job-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+.job-image-container {
+  position: relative;
+}
+
+.job-image {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+}
+
+.icon-btn {
+  position: absolute;
+  top: 1rem;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.back-btn { left: 1rem; }
+
+.job-content {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.job-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+  color: #212121;
+}
+
+.job-company {
+  margin-bottom: 1rem;
+  color: #21212180;
+}
+
+.job-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.job-type { color: #009688; }
+.job-location { color: #21212180; display: flex; align-items: center; gap: 0.25rem; }
+.job-salary { color: #009688; display: flex; align-items: center; gap: 0.25rem; }
+
+.accessibility-card {
+  background: #00968810;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #00968820;
+}
+
+.benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.benefit-icon {
+  width: 2rem;
+  height: 2rem;
+  background: #009688;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.job-section {
+  margin-bottom: 1rem;
+}
+
+.job-section h3 { margin-bottom: 0.5rem; }
+
+.job-footer {
+  padding: 1rem;
+  background: white;
+  border-top: 1px solid #f5f5f5;
+}
+
+.apply-btn {
+  width: 100%;
+  background: #009688;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
