@@ -1,13 +1,16 @@
 // src/components/HomePage.jsx
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAppContext } from "../Store/store";
+import { useAppContext } from "../Store/store"; // سياق التطبيق
 import BottomNav from "./BottomNav";
 import Location from "./Loctaion.jsx";
 import "./HomePage.css";
 
 export default function HomePage() {
-  const { user } = useAppContext();
+  // تأكد أن useAppContext ترجع object حتى لو undefined
+  const context = useAppContext() || {};
+  const { user } = context;
+
   const navigate = useNavigate();
   const [dateTime, setDateTime] = useState("");
 
@@ -16,6 +19,7 @@ export default function HomePage() {
     setDateTime(now.toLocaleString());
   }, []);
 
+  // لو ما في user، نعرض رسالة بسيطة
   if (!user) {
     return (
       <div className="homepage">

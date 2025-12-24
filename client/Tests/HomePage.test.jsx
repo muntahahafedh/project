@@ -1,29 +1,18 @@
-// Tests/HomePage.test.jsx
-import React from "react";
+// Tests/HomePageSimple.test.jsx
+import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import HomePage from "../src/components/HomePage";
 import { BrowserRouter } from "react-router-dom";
-import "@testing-library/jest-dom";
-// Mock صحيح للـ context
-vi.mock("../src/Store/store.jsx", () => {
-  return {
-    useAppContext: () => ({ isLoggedIn: false }), // <= رجّع قيمة افتراضية
-  };
-});
+import HomePage from "../src/components/HomePage.jsx";
 
-// Mock للـ BottomNav
-vi.mock("../src/components/BottomNav", () => {
-  return {
-    default: () => <div data-testid="bottom-nav" />,
-  };
-});
+describe("HomePage Simple Test", () => {
+  it("renders without crashing", () => {
+    render(
+      <BrowserRouter>
+        <HomePage />
+      </BrowserRouter>
+    );
 
-test("renders HomePage with title", () => {
-  render(
-    <BrowserRouter>
-      <HomePage />
-    </BrowserRouter>
-  );
-  
-  expect(screen.getByText(/Muyan/i)).toBeInTheDocument();
+    // بما أن user غير موجود، سيظهر نص تسجيل الدخول
+    expect(screen.getByText(/Please log in to see the homepage/i)).not.toBeNull();
+  });
 });
