@@ -113,3 +113,16 @@
 .value {
   color: #111;
 }
+/* Profile.css */
+.profile-info .info-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.ip-location-card {
+  background: #f5f5f5;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+}

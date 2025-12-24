@@ -1,14 +1,11 @@
-
+// src/components/Profile.js
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { useAppContext } from "../Store/store";
 import avatarImg from "../Images/avatar.png";
 import "./Profile.css";
-import Location from "./Location";
-import LocationCard from "./LocationCard";
-
-
+import Location from "./Loctaion.jsx"; // 
 
 export default function Profile() {
   const { user } = useAppContext();
@@ -22,7 +19,7 @@ export default function Profile() {
     const now = new Date();
     setDateTime(now.toLocaleString());
 
-    // Get user location
+    // Get user location via browser API
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
@@ -38,7 +35,6 @@ export default function Profile() {
     }
   }, []);
 
-  // Safety check (not logged in)
   if (!user) {
     return (
       <div className="profile-page">
@@ -73,23 +69,23 @@ export default function Profile() {
           <span className="label">Email</span>
           <span className="value">{user.email}</span>
         </div>
-        <LocationCard />
+
+        {/* External Location component */}
         <Location />
 
-
-        {/* New Location */}
+        {/* Browser geolocation */}
         <div className="info-row">
-          <span className="label">Location</span>
+          <span className="label">Browser Location</span>
           <span className="value">{location}</span>
         </div>
 
-        {/* New Date & Time */}
+        {/* Date & Time */}
         <div className="info-row">
           <span className="label">Date & Time</span>
           <span className="value">{dateTime}</span>
         </div>
 
-        {/* Optional phone (future-proof) */}
+        {/* Optional phone */}
         {user.phone && (
           <div className="info-row">
             <span className="label">Phone</span>
@@ -100,4 +96,3 @@ export default function Profile() {
     </div>
   );
 }
-

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Accessibility, MapPin, DollarSign } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import "./JobListings.css";
-import { BottomNav } from "./BottomNav.jsx";
+import  BottomNav  from "./BottomNav.jsx";
 
 const categories = ["All", "IT", "Design", "Retail", "Customer Service", "Marketing"];
 
