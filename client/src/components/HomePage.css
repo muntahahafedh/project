@@ -18,24 +18,8 @@
   margin-bottom: 1rem;
 }
 
-.search-box {
-  position: relative;
-}
 
-.search-box input {
-  width: 100%;
-  padding: 0.5rem 0.5rem 0.5rem 2rem;
-  border-radius: 0.5rem;
-  border: none;
-}
 
-.search-icon {
-  position: absolute;
-  top: 50%;
-  left: 0.5rem;
-  transform: translateY(-50%);
-  color: #21212180;
-}
 
 .home-cards {
   display: flex;
